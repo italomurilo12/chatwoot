@@ -34,5 +34,4 @@ test:
 
 production:
   <<: *default
-  # Railway provides DATABASE_URL, use it directly
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV.fetch('DATABASE_URL') %>
